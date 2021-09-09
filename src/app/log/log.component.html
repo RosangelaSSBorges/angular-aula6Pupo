@@ -1,0 +1,7 @@
+<h2>Log</h2>
+<button (click)="logger.clear()">Clear</button>
+<ul>
+<li *ngFor="let message of this.logger.messages">
+  {{message}}
+</li>
+</ul>

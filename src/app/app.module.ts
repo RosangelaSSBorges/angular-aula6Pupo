@@ -10,6 +10,7 @@ import { TimerService } from './timer.service';
 import { TasksService } from './tasks.service';
 import { TasksComponent } from './tasks/tasks.component';
 import { LoggerService } from './logger.service';
+import { LogComponent } from './log/log.component';
 
 @NgModule({
   imports:      [ 
@@ -18,10 +19,11 @@ import { LoggerService } from './logger.service';
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'tasks', component: TasksComponent},
+      {path: 'log', component: LogComponent},
       
     ])
    ],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, TasksComponent ],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, TasksComponent, LogComponent ],
   bootstrap:    [ AppComponent ],
   providers: [TimerService, TasksService, LoggerService]
 })
