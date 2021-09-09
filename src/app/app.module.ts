@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import {RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -13,18 +13,17 @@ import { LoggerService } from './logger.service';
 import { LogComponent } from './log/log.component';
 
 @NgModule({
-  imports:      [ 
-    BrowserModule, 
+  imports: [
+    BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      {path: '', component: HomeComponent},
-      {path: 'tasks', component: TasksComponent},
-      {path: 'log', component: LogComponent},
-      
+      { path: '', component: HomeComponent },
+      { path: 'tasks', component: TasksComponent },
+      { path: 'log', component: LogComponent }
     ])
-   ],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, TasksComponent, LogComponent ],
-  bootstrap:    [ AppComponent ],
+  ],
+  declarations: [AppComponent, HelloComponent, HomeComponent, TasksComponent, LogComponent],
+  bootstrap: [AppComponent],
   providers: [TimerService, TasksService, LoggerService]
 })
-export class AppModule { }
+export class AppModule {}
